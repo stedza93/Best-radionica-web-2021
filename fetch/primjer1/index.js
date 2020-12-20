@@ -35,12 +35,14 @@ getRickAndMortyChar();
 function listAllChar(chars) {
   console.log(chars);
   let output = "";
-  chars.forEach(element => {
-      output+=`<ul>
-      <li><img src=${element.image}></li>
-      <li>Name: ${element.name}</li>
-      <li>Species: ${element.species}</li>
-      </ul>`
+  chars.forEach((element) => {
+    output += `<div class="card" style="width: 18rem;">
+      <img src=${element.image} class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text">Name: ${element.name}</p>
+        <p class="card-text">Species: ${element.species}</p>
+      </div>
+    </div>`;
   });
   document.getElementById("studentList").innerHTML = output;
 }
